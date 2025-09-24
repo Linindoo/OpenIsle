@@ -1,4 +1,4 @@
-name: CI
+name: build and push docker
 
 on:
   push:
@@ -54,4 +54,4 @@ jobs:
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_REGISTRY }}/${{ github.repository_owner }}/openisle:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_REGISTRY }}/lindoo/openisle:${{ github.sha }}

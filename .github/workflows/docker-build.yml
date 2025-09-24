@@ -38,7 +38,7 @@ jobs:
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: false
-          tags: ${{ github.repository | lower }}:${{ github.sha }}
+          tags: openisle:${{ github.sha }}
 
       - name: Log in to container registry
         uses: docker/login-action@v2
